@@ -4,7 +4,7 @@
 #include <iostream>
 #include <cstdlib>
 
-#include <lifx.h>
+#include <LIFX.h>
 
 using namespace std;
 

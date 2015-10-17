@@ -1,4 +1,4 @@
-#include <lifx.h>
+#include <LIFX.h>
 
 size_t writefunc(void *ptr, size_t size, size_t nmemb, std::string *s)
 {
