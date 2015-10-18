@@ -53,7 +53,7 @@ void LIFXProduct::setCompany(std::string Company)
 	this->Company = Company;
 }
 
-void LIFXProduct::setHastColor(bool HasColor)
+void LIFXProduct::setHasColor(bool HasColor)
 {
 	this->HasColor = HasColor;
 }

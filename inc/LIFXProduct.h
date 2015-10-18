@@ -19,7 +19,7 @@ class LIFXProduct {
 		void setName(std::string Name);
 		void setIdentifier(std::string Identifier);
 		void setCompany(std::string Company);
-		void setHastColor(bool HasColor);
+		void setHasColor(bool HasColor);
 		void setHasVariableColorTemp(bool HasVariableColorTemp);
 
 	private:
