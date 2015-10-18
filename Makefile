@@ -14,7 +14,7 @@ OBJECTS = $(patsubst $(SRC_DIR)/%,$(OBJ_DIR)/%,$(SOURCES:.$(SRC_EXT)=.$(OBJ_EXT)
 CXXFLAGS = -Wall -Wfatal-errors
 
 INC = -I$(INC_DIR)
-LIBS = -lcurl
+LIBS = -lcurl -ljsoncpp
 
 .PHONY: clean mrproper
 
