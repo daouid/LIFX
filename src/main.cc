@@ -19,9 +19,6 @@ int main(int argc, char* argv[])
 	string lifx_token = (argv[1]);
 
 	LIFX lifx = LIFX(lifx_token);
-	string result = lifx.getAllLamps();
-
-	cout << result << endl;
 
 	return EXIT_SUCCESS;
 }
