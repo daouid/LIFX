@@ -14,15 +14,28 @@ class LIFXLamp {
 		std::string getID();
 		std::string getUUID();
 		std::string getLabel();
-		bool getConnected();
+		bool isConnected();
 		std::string getPower();
 		double getBrightness();
 		std::string getLastSeen();
-		double getSecondsSinceLastSeen();
+		double getSecondsSinceSeen();
 		LIFXColor getColor();
 		LIFXGroup getGroup();
 		LIFXLocation getLocation();
 		LIFXProduct getProduct();
+
+		void setID(std::string ID);
+		void setUUID(std::string UUID);
+		void setLabel(std::string Label);
+		void setConnected(bool Connected);
+		void setPower(std::string Power);
+		void setBrightness(double Brightness);
+		void setLastSeen(std::string LastSeen);
+		void setSecondsSinceSeen(double SecondsSinceSeen);
+		void setColor(LIFXColor Color);
+		void setGroup(LIFXGroup Group);
+		void setLocation(LIFXLocation Location);
+		void setProduct(LIFXProduct Product);
 
 	private:
 		std::string ID, UUID, Label, Power, LastSeen;
