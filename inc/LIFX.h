@@ -15,6 +15,8 @@ class LIFX {
 	public:
 		LIFX(std::string APIToken);
 
+		std::string HTTPApi(std::string Method, std::string Selector, std::string APIToken);
+
 		std::vector<LIFXLamp> getLamps();
 
 	private:
