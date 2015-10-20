@@ -2,6 +2,7 @@
 #define LIFX_LAMP_H_
 
 #include <string>
+#include <LIFXHTTPApi.h>
 #include <LIFXColor.h>
 #include <LIFXGroup.h>
 #include <LIFXLocation.h>
@@ -10,6 +11,7 @@
 class LIFXLamp {
 	public:
 		LIFXLamp();
+		LIFXLamp(std::string APIToken);
 
 		std::string getID();
 		std::string getUUID();
@@ -37,7 +39,10 @@ class LIFXLamp {
 		void setLocation(LIFXLocation Location);
 		void setProduct(LIFXProduct Product);
 
+		void toggle();
+
 	private:
+		std::string APIToken;
 		std::string ID, UUID, Label, Power, LastSeen;
 		bool Connected;
 		double Brightness, SecondsSinceSeen;

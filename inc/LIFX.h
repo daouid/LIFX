@@ -3,8 +3,8 @@
 
 #include <string>
 #include <vector>
-#include <curl/curl.h>
 #include <jsoncpp/json/json.h>
+#include <LIFXHTTPApi.h>
 #include <LIFXColor.h>
 #include <LIFXGroup.h>
 #include <LIFXLamp.h>
@@ -14,8 +14,6 @@
 class LIFX {
 	public:
 		LIFX(std::string APIToken);
-
-		std::string HTTPApi(std::string Method, std::string Selector, std::string APIToken);
 
 		std::vector<LIFXLamp> getLamps();
 

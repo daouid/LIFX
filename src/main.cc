@@ -19,6 +19,12 @@ int main(int argc, char* argv[])
 	string lifx_token = (argv[1]);
 
 	LIFX lifx = LIFX(lifx_token);
+	vector<LIFXLamp> Lamps = lifx.getLamps();
+
+	for (unsigned int i = 0; i < Lamps.size(); i++) {
+		cout << "Toggling state of " << Lamps[i].getLabel() << endl;
+		Lamps[i].toggle();
+	}
 
 	return EXIT_SUCCESS;
 }

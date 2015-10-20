@@ -2,6 +2,11 @@
 
 LIFXLamp::LIFXLamp() {}
 
+LIFXLamp::LIFXLamp(std::string APIToken)
+{
+	this->APIToken = APIToken;
+}
+
 std::string LIFXLamp::getID()
 {
 	return ID;
@@ -120,4 +125,11 @@ void LIFXLamp::setLocation(LIFXLocation Location)
 void LIFXLamp::setProduct(LIFXProduct Product)
 {
 	this->Product = Product;
+}
+
+void LIFXLamp::toggle()
+{
+	std::string Selector("id:" + ID + "/toggle");
+	std::string result;
+    result = LIFXHTTPApi("POST", Selector, APIToken);
 }
