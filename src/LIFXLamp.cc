@@ -131,5 +131,12 @@ void LIFXLamp::toggle()
 {
 	std::string Selector("id:" + ID + "/toggle");
 	std::string result;
-    result = LIFXHTTPApi("POST", Selector, APIToken);
+	result = LIFXHTTPApi("POST", Selector, APIToken);
+
+	if (Power.compare("off") == 0) {
+		Power = "on";
+	}
+	else if (Power.compare("on") == 0) {
+		Power = "off";
+	}
 }
