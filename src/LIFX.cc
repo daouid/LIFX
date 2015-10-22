@@ -5,7 +5,7 @@ LIFX::LIFX(std::string APIToken)
 	this->APIToken = APIToken;
 
     std::string result;
-    result = LIFXHTTPApi("GET", "all", APIToken);
+    result = LIFXHTTPApi("GET", "all", "", APIToken);
 
     Json::Value root;
     Json::Reader reader;

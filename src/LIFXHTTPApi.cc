@@ -7,7 +7,7 @@ size_t writefunc(void *ptr, size_t size, size_t nmemb, std::string *s)
     return size*nmemb;
 }
 
-std::string LIFXHTTPApi(std::string Method, std::string Selector, std::string APIToken)
+std::string LIFXHTTPApi(std::string Method, std::string Selector, std::string Data, std::string APIToken)
 {
     CURL *curl;
     CURLcode res;

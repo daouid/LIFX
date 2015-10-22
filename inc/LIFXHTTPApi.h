@@ -4,6 +4,6 @@
 #include <string>
 #include <curl/curl.h>
 
-std::string LIFXHTTPApi(std::string Method, std::string Selector, std::string APIToken);
+std::string LIFXHTTPApi(std::string Method, std::string Selector, std::string Data, std::string APIToken);
 
 #endif /* LIFX_H_ */
