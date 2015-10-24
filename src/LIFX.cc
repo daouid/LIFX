@@ -1,5 +1,7 @@
 #include <LIFX.h>
 
+LIFX:LIFX() {}
+
 LIFX::LIFX(std::string APIToken)
 {
 	this->APIToken = APIToken;

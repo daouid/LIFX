@@ -13,6 +13,7 @@
 
 class LIFX {
 	public:
+		LIFX();
 		LIFX(std::string APIToken);
 
 		std::vector<LIFXLamp> getLamps();
