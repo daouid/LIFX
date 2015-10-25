@@ -64,7 +64,17 @@ LIFX::LIFX(std::string APIToken)
     }
 }
 
+std::string LIFX::getAPIToken()
+{
+	return APIToken;
+}
+
 std::vector<LIFXLamp> LIFX::getLamps()
 {
     return Lamps;
+}
+
+void LIFX::setAPIToken(std::std string APIToken)
+{
+	this->APIToken = APIToken;
 }
