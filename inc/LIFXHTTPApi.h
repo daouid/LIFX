@@ -6,4 +6,4 @@
 
 std::string LIFXHTTPApi(std::string Method, std::string Selector, std::string Data, std::string APIToken);
 
-#endif /* LIFX_H_ */
+#endif /* LIFX_HTTP_API_H_ */
