@@ -40,6 +40,8 @@ class LIFXLamp {
 		void setProduct(LIFXProduct Product);
 
 		void toggle();
+		void turnOn();
+		void turnOff();
 
 	private:
 		std::string APIToken;

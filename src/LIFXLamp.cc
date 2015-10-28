@@ -140,3 +140,21 @@ void LIFXLamp::toggle()
 		Power = "off";
 	}
 }
+
+void LIFXLamp::turnOn()
+{
+	std::string Selector("id:" + ID + "/state");
+	std::string result;
+	result = LIFXHTTPApi("PUT", Selector, "{\"power\":\"on\"}", APIToken);
+
+	Power = "on";
+}
+
+void LIFXLamp::turnOff()
+{
+	std::string Selector("id:" + ID + "/state");
+	std::string result;
+	result = LIFXHTTPApi("PUT", Selector, "{\"power\":\"off\"}", APIToken);
+
+	Power = "off";
+}
