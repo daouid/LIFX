@@ -1,6 +1,6 @@
 #include <LIFX.h>
 
-LIFX:LIFX() {}
+LIFX::LIFX() {}
 
 LIFX::LIFX(std::string APIToken)
 {
@@ -74,7 +74,7 @@ std::vector<LIFXLamp> LIFX::getLamps()
     return Lamps;
 }
 
-void LIFX::setAPIToken(std::std string APIToken)
+void LIFX::setAPIToken(std::string APIToken)
 {
 	this->APIToken = APIToken;
 }

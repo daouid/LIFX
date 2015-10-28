@@ -19,7 +19,7 @@ class LIFX {
 		std::string getAPIToken();
 		std::vector<LIFXLamp> getLamps();
 
-		void setAPIToken(std::std string APIToken);
+		void setAPIToken(std::string APIToken);
 
 	private:
 		std::string APIToken;
