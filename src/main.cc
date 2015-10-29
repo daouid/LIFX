@@ -27,7 +27,7 @@ int main(int argc, char* argv[])
 		Lamps[i].turnOn();
 	}
 
-	usleep(2000);
+	usleep(5000);
 
 	for (unsigned int i = 0; i < Lamps.size(); i++) {
 		cout << "Turning " << Lamps[i].getLabel() << " off" << endl;

@@ -24,6 +24,10 @@ std::string LIFXHTTPApi(std::string Method, std::string Selector, std::string Da
         header.append(APIToken);
         struct curl_slist *headers = NULL;
         headers = curl_slist_append(headers, header.c_str());
+        if (Method == "PUT") {
+            headers = curl_slist_append(headers, "Content-Type: application/json");
+            curl_easy_setopt(curl, CURLOPT_POSTFIELDS, Data.c_str());
+        }
 
         curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
         curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
@@ -41,6 +45,7 @@ std::string LIFXHTTPApi(std::string Method, std::string Selector, std::string Da
             fprintf(stderr, "curl_easy_perform() failed: %s\n", curl_easy_strerror(res));
         }
 
+        curl_slist_free_all(headers);
         curl_easy_cleanup(curl);
     }
 
