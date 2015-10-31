@@ -23,6 +23,20 @@ int main(int argc, char* argv[])
 	vector<LIFXLamp> Lamps = lifx.getLamps();
 
 	for (unsigned int i = 0; i < Lamps.size(); i++) {
+		cout << "Toggling state of " << Lamps[i].getLabel() << endl;
+		Lamps[i].toggle();
+	}
+
+	sleep(5);
+
+	for (unsigned int i = 0; i < Lamps.size(); i++) {
+		cout << "Toggling state of " << Lamps[i].getLabel() << endl;
+		Lamps[i].toggle();
+	}
+
+	sleep(5);
+
+	for (unsigned int i = 0; i < Lamps.size(); i++) {
 		cout << "Turning " << Lamps[i].getLabel() << " on" << endl;
 		Lamps[i].turnOn();
 	}
