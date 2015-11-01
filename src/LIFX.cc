@@ -78,3 +78,17 @@ void LIFX::setAPIToken(std::string APIToken)
 {
 	this->APIToken = APIToken;
 }
+
+void LIFX::turnAllLampsOn()
+{
+	std::string Selector("all/state");
+	std::string result;
+	result = LIFXHTTPApi("PUT", Selector, "{\"power\":\"on\"}", APIToken);
+}
+
+void LIFX::turnAllLampsOff()
+{
+	std::string Selector("all/state");
+	std::string result;
+	result = LIFXHTTPApi("PUT", Selector, "{\"power\":\"off\"}", APIToken);
+}

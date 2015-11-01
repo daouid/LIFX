@@ -21,6 +21,9 @@ class LIFX {
 
 		void setAPIToken(std::string APIToken);
 
+		void turnAllLampsOn();
+		void turnAllLampsOff();
+
 	private:
 		std::string APIToken;
 		std::vector<LIFXLamp> Lamps;
