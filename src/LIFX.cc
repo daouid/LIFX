@@ -84,6 +84,10 @@ void LIFX::turnAllLampsOn()
 	std::string Selector("all/state");
 	std::string result;
 	result = LIFXHTTPApi("PUT", Selector, "{\"power\":\"on\"}", APIToken);
+
+	for (unsigned int i = 0; i < Lamps.size(); i++) {
+		Lamps[i].setPower("on");
+	}
 }
 
 void LIFX::turnAllLampsOff()
@@ -91,4 +95,8 @@ void LIFX::turnAllLampsOff()
 	std::string Selector("all/state");
 	std::string result;
 	result = LIFXHTTPApi("PUT", Selector, "{\"power\":\"off\"}", APIToken);
+
+	for (unsigned int i = 0; i < Lamps.size(); i++) {
+		Lamps[i].setPower("off");
+	}
 }
